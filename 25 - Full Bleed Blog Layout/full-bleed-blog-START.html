@@ -75,7 +75,7 @@
     <p>I work hard, scarred, toil through that soil for the youth I see in my friends, but these journals are moments in time,
       snapshots of our lives, and in retrospect, age is an overexposed photo that the memories can't mend</p>
 
-    <div class="tip tip-right">
+    <div class="tip tip-right tip-right--high">
       <img src="https://f4.bcbits.com/img/a1057026609_16.jpg" alt="Correspondence Album Cover">
       <p>Buy the album on
         <a href="https://levithepoet.bandcamp.com/album/correspondence-a-fiction">BandCamp</a>
@@ -154,8 +154,53 @@
       font-weight: 100;
       margin: 0;
     }
-  </style>
 
+    .post {
+      display: grid;
+      max-width: 1000px;
+      margin: 200px auto;
+      gap: 10px 50px;
+      grid-template-columns: 3fr 12fr 5fr;
+    }
+    
+    .post > * {
+      grid-column: 2 / -2;
+    }
+
+    .post >  figure {
+      margin: 0;
+      grid-column: 1 / -1;
+    }
+
+    figcaption {
+      font-size: 10px;
+    }
+
+    .post > blockquote {
+      grid-column: 1 / -1;
+      font-size: 60px;
+      font-style: italic;
+      text-align: center;
+      margin: 0;
+    }
+
+    .tip-left {
+      grid-column: 1 / span 1;
+      text-align: right;
+      border-right: 2px solid var(--yellow);
+    }
+
+    .tip-right {
+      grid-column: span 1 / -1;
+      border-left: 2px solid var(--yellow);
+    }
+
+    .tip-right--high {
+      grid-row: span 4;
+      align-self: start;
+    }
+
+  </style>
 </body>
 
 </html>
